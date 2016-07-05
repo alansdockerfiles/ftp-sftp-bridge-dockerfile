@@ -15,5 +15,5 @@ $mkdir mymount
 $sshfs ... mymount
 ```
 
-then conect to your server as root
+then ftp to your server as root
 
