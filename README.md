@@ -8,10 +8,11 @@ docker run -p 21:21 -p 20:20 -p 30000-30010:30000-30010 -i -d -t  --privileged=t
 
 docker exec -i -t ftp-sftp-bridge-dockerfile bash 
 
-cd /root
-passwd
-mkdir mymount
-sshfs ... mymount
+$cd /root
+$passwd
+$service vsftpd start
+$mkdir mymount
+$sshfs ... mymount
 ```
 
 then conect to your server as root
