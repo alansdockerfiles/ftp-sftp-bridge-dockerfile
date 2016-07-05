@@ -2,6 +2,17 @@
 
 expose sftp location as ftp service.
 
+usage:
 ```
-docker run $([ -d /workdir ] && echo -v /workdir:/workdir) -p 21:21 -p 20:20 -i -d -t -e "DISPLAY=unix:0.0" -v="/tmp/.X11-unix:/tmp/.X11-unix:rw" --privileged=true --expose=80-90 --name "${PWD##*/}"  "${PWD##*/}"
+docker run -p 21:21 -p 20:20 -p 30000-30010:30000-30010 -i -d -t  --privileged=true --name ftp-sftp-bridge-dockerfile  xpika/ftp-sftp-bridge-dockerfile
+
+docker exec -i -t ftp-sftp-bridge-dockerfile bash 
+
+cd /root
+passwd
+mkdir mymount
+sshfs ... mymount
 ```
+
+then conect to your server as root
+
