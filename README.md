@@ -2,7 +2,7 @@
 
 expose sftp location as ftp service.
 
-usage:
+###usage:
 ```
 docker run -p 21:21 -p 20:20 -p 30000-30010:30000-30010 -i -d -t  --privileged=true --name ftp-sftp-bridge-dockerfile  xpika/ftp-sftp-bridge-dockerfile
 
